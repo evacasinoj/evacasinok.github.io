@@ -299,40 +299,33 @@
             </div>
         </div>
     </footer>
-
-    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Data for Games
         const gamesData = [
-            { id: 1, title: "Royal Easter", provider: "BGaming", img: "https://static.photos/320x360/1", hot: true },
-            { id: 2, title: "Sugar Merge Up", provider: "BGaming", img: "https://static.photos/320x360/2", hot: false },
-            { id: 3, title: "CULT.", provider: "Pragmatic", img: "https://static.photos/320x360/3", hot: true },
-            { id: 4, title: "Mummyland Treasures", provider: "Belatra", img: "https://static.photos/320x360/4", hot: false },
-            { id: 5, title: "Mummy Mines", provider: "Belatra", img: "https://static.photos/320x360/5", hot: false },
-            { id: 6, title: "Olympus Rivals", provider: "Amigo", img: "https://static.photos/320x360/6", hot: true },
-            { id: 7, title: "Sloteus Gold", provider: "Endorphina", img: "https://static.photos/320x360/7", hot: false },
-            { id: 8, title: "Fruit Invaders", provider: "Amigo", img: "https://static.photos/320x360/8", hot: false },
-            { id: 9, title: "Crown Coins", provider: "Endorphina", img: "https://static.photos/320x360/9", hot: false },
-            { id: 10, title: "Mummy's Jewels 100", provider: "Pragmatic", img: "https://static.photos/320x360/10", hot: true },
-            { id: 11, title: "Sultans Fortune", provider: "KAGaming", img: "https://static.photos/320x360/11", hot: false },
-            { id: 12, title: "Gold Canyon", provider: "Betsoft", img: "https://static.photos/320x360/12", hot: false },
-            { id: 13, title: "Raging Wings", provider: "Endorphina", img: "https://static.photos/320x360/13", hot: false },
-            { id: 14, title: "3 Crowns: Coin Hunt", provider: "Evoplay", img: "https://static.photos/320x360/14", hot: false },
-            { id: 15, title: "Book of Crystal Fruits", provider: "Tomhorn", img: "https://static.photos/320x360/15", hot: false },
-            { id: 16, title: "Zeus vs Hades", provider: "Pragmatic", img: "https://static.photos/320x360/16", hot: true },
-            { id: 17, title: "Starlight Princess", provider: "Pragmatic", img: "https://static.photos/320x360/17", hot: true },
-            { id: 18, title: "Bonanza Billion", provider: "BGaming", img: "https://static.photos/320x360/18", hot: true },
+            { id: 1, title: "Royal Easter", provider: "BGaming", img: "images/1772197713078_Gold Canyon.png", hot: true },
+            { id: 2, title: "Sugar Merge Up", provider: "BGaming", img: "images/1772469217665_MEGA THUNDER_ RUNNING WINSâ_¢ X-SERIES.png", hot: false },
+            { id: 3, title: "CULT.", provider: "Pragmatic", img: "images/1772469618158_Sultans Fortune.png", hot: true },
+            { id: 4, title: "Mummyland Treasures", provider: "Belatra", img: "images/1772618423154_Mummy's Jewels 100.png", hot: false },
+            { id: 5, title: "Mummy Mines", provider: "Belatra", img: "images/1772619649399_Olympus Rivals.png", hot: false },
+            { id: 6, title: "Olympus Rivals", provider: "Amigo", img: "images/1772629280571_Fortune Bags.png", hot: true },
+            { id: 7, title: "Sloteus Gold", provider: "Endorphina", img: "images/1772786751790_Fruit Invaders.png", hot: false },
+            { id: 8, title: "Fruit Invaders", provider: "Amigo", img: "images/1772787068294_Sloteus Gold.png", hot: false },
+            { id: 9, title: "Crown Coins", provider: "Endorphina", img: "images/1772787121807_Crown Coins.png", hot: false },
+            { id: 10, title: "Mummy's Jewels 100", provider: "Pragmatic", img: "images/1773145823707_Mummy Mines.png", hot: true },
+            { id: 11, title: "Sultans Fortune", provider: "KAGaming", img: "images/1773146257298_mummyland treasures.png", hot: false },
+            { id: 12, title: "Gold Canyon", provider: "Betsoft", img: "images/1773224174735_STRIKING DIAMOND 3_ RUNNING WINSâ_¢.png", hot: false },
+            { id: 13, title: "Raging Wings", provider: "Endorphina", img: "images/13391-1.jpg", hot: false },
+            { id: 14, title: "3 Crowns: Coin Hunt", provider: "Evoplay", img: "images/13520-1.jpg", hot: false },
+            { id: 15, title: "Book of Crystal Fruits", provider: "Tomhorn", img: "images/17349-1.jpg", hot: false },
+            { id: 16, title: "Zeus vs Hades", provider: "Pragmatic", img: "images/19736-1.jpg", hot: true },
+            { id: 17, title: "Starlight Princess", provider: "Pragmatic", img: "images/20122-1.jpg", hot: true },
+            { id: 18, title: "Bonanza Billion", provider: "BGaming", img: "images/526510.png", hot: true },
         ];
-
-        // Function to render games
         function renderGames() {
             const grid = document.getElementById('games-grid');
             grid.innerHTML = '';
-
             gamesData.forEach(game => {
                 const card = document.createElement('div');
-                card.className = "group relative aspect-[9/10] w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-gray-700 bg-gray-800 shadow-md hover:border-yellow-400 hover:shadow-[0_8px_0_0_var(--color-yellow-400)] transition-all duration-300";
-                
+                card.className = "group relative aspect-[9/10] w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-gray-700 bg-gray-800 shadow-md hover:border-yellow-400 hover:shadow-[0_8px_0_0_var(--color-yellow-400)] transition-all duration-300";                
                 card.innerHTML = `
                     <div class="absolute inset-0 z-10 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                     <img src="${game.img}" alt="${game.title}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
@@ -341,7 +334,6 @@
                     <div class="absolute top-2 left-2 z-20 bg-yellow-400 text-gray-900 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
                         New
                     </div>` : ''}
-
                     <div class="absolute inset-x-0 bottom-0 z-20 p-3 bg-gradient-to-t from-gray-950 via-gray-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end h-full">
                         <h3 class="text-white font-bold text-sm text-center leading-tight mb-1 line-clamp-2">${game.title}</h3>
                         <div class="flex items-center gap-1 text-xs text-gray-400">
@@ -357,36 +349,27 @@
                 grid.appendChild(card);
             });
         }
-
-        // Tab switching logic
         const tabs = document.querySelectorAll('.cat-tab');
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remove active class from all
                 tabs.forEach(t => {
                     t.classList.remove('active', 'bg-gray-800', 'text-white', 'shadow-sm');
                     t.classList.add('text-gray-400');
                 });
-                // Add active to clicked
                 tab.classList.add('active', 'bg-gray-800', 'text-white', 'shadow-sm');
                 tab.classList.remove('text-gray-400');
-                
-                // Here you would filter games, for now we just re-render to simulate refresh
                 const grid = document.getElementById('games-grid');
                 grid.style.opacity = '0.5';
                 setTimeout(() => {
-                    renderGames(); // In a real app, this would filter based on tab.dataset.cat
+                    renderGames(); 
                     grid.style.opacity = '1';
                 }, 200);
             });
         });
-
-        // Mobile Sidebar Logic
         const menuBtn = document.getElementById('menu-btn');
         const closeSidebar = document.getElementById('close-sidebar');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebar-overlay');
-
         function toggleMenu() {
             const isClosed = sidebar.classList.contains('-translate-x-full');
             if (isClosed) {
@@ -399,12 +382,9 @@
                 setTimeout(() => overlay.classList.add('hidden'), 300);
             }
         }
-
         menuBtn.addEventListener('click', toggleMenu);
         closeSidebar.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
-
-        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
             renderGames();
